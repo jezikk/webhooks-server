@@ -1,0 +1,19 @@
+{
+  "app-name": {
+    "workdir": "/Users/jezikk/Documents/Repositories/webhooks-server/example",
+    "script": "test.sh",
+    "rules": [
+      {
+        "any": [
+          {
+            "all": [
+              { "rule": "", "source": "", "attribute": "", "value": "" },
+              { "rule": "", "source": "", "attribute": "", "value": "" }
+            ]
+          },
+          { "rule": "", "source": "", "attribute": "", "value": "" }
+        ]
+      }
+    ]
+  }
+}
