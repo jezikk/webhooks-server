@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import { flattenObject } from './utils';
+import { getFlattenObject } from './utils';
 
 describe('flattenObject', () => {
   it('Flatten 1-level object', () => {
@@ -8,7 +8,7 @@ describe('flattenObject', () => {
       key2: 'value2',
     };
     const target = { ...source };
-    const result = flattenObject(source);
+    const result = getFlattenObject(source);
     expect(result).toEqual(target);
   });
   it('Flatten nested object', () => {
@@ -31,7 +31,7 @@ describe('flattenObject', () => {
       'key4.key41': 'value41',
       'key4.key42.key421': 'value421',
     };
-    const result = flattenObject(source);
+    const result = getFlattenObject(source);
     expect(result).toEqual(target);
   });
 });

@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import { equal } from '../rules';
+import { equal } from '.';
 
 describe('Equal rule', () => {
   it('Equal the same values', () => {
