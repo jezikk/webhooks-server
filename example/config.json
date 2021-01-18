@@ -7,11 +7,11 @@
         "any": [
           {
             "all": [
-              { "rule": "", "source": "", "attribute": "", "value": "" },
-              { "rule": "", "source": "", "attribute": "", "value": "" }
+              { "name": "", "source": "", "attribute": "", "value": "" },
+              { "name": "", "source": "", "attribute": "", "value": "" }
             ]
           },
-          { "rule": "", "source": "", "attribute": "", "value": "" }
+          { "name": "", "source": "", "attribute": "", "value": "" }
         ]
       }
     ]

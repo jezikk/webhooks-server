@@ -1,4 +1,3 @@
-import { jest } from '@jest/globals';
 import { getFlattenObject } from './utils';
 
 describe('flattenObject', () => {
