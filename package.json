@@ -10,7 +10,8 @@
     "build": "tsc",
     "dev": "nodemon",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "clean": "rm -rf logs"
   },
   "dependencies": {
     "crypto": "^1.0.1",

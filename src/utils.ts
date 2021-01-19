@@ -1,5 +1,6 @@
 import * as crypto from 'crypto';
 import { exec } from 'child_process';
+import { logger } from './logger';
 
 export function verifyRequest(req, payload, secret) {
   const sigHeaderName = 'X-Hub-Signature';
@@ -19,11 +20,11 @@ export function verifyRequest(req, payload, secret) {
 export function runShellScript(scriptFilePath: string, workdir: string) {
   exec(`sh ${scriptFilePath}`, { cwd: workdir }, (error, stdout, stderr) => {
     if (error) {
-      console.error(`exec error: ${error}`);
-      return;
+      throw new Error(`Script exec error: ${error}`);
     }
-    if (stdout) console.log(stdout);
-    if (stderr) console.error(`stderr: ${stderr}`);
+    if (stdout) logger.info(`Script stdout: ${stdout}`);
+    if (stderr) logger.error(`Script stderr: ${stderr}`);
+    if (!error) logger.info(`Script completed`);
   });
 }
 

@@ -1,18 +1,14 @@
 {
   "app-name": {
     "workdir": "/Users/jezikk/Documents/Repositories/webhooks-server/example",
-    "script": "test.sh",
+    "script": "/Users/jezikk/Documents/Repositories/webhooks-server/example/test.sh",
     "rules": [
+      { "name": "equal", "source": "body", "attribute": "test", "value": 1 },
       {
-        "any": [
-          {
-            "all": [
-              { "name": "", "source": "", "attribute": "", "value": "" },
-              { "name": "", "source": "", "attribute": "", "value": "" }
-            ]
-          },
-          { "name": "", "source": "", "attribute": "", "value": "" }
-        ]
+        "name": "contain",
+        "source": "header",
+        "attribute": "content-type",
+        "value": "json"
       }
     ]
   }
